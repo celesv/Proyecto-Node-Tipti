@@ -13,7 +13,7 @@ const PORT = 3010
 app.use(express.json())
 
 // Iniciamos el servidor y lo ponemos en escucha en el puerto indicado
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
+app.listen(PORT, () => console.log(`Server running on port ${PORT}: http://localhost:${PORT}`))
 
 // Iniciamos la db al llamar a la función connectDB que esta en db\db.js
 db();

@@ -7,13 +7,12 @@ function getAllUsers(req, res) {
 
     User.find().then((e) => {
         res
-            .json(e) // Respondemos con la lista de usuarios. Enviamos todos los usuarios como respuesta. Cuando la consulta se completa exitosamente, el método then() se ejecuta con el resultado de la consulta, que en este caso es un arreglo de objetos (cada objeto representa un usuario encontrado). Luego, res.json(e) envía una respuesta JSON al cliente, donde e es el arreglo de usuarios encontrado.
+            .json(e)}) // Respondemos con la lista de usuarios. Enviamos todos los usuarios como respuesta. Cuando la consulta se completa exitosamente, el método then() se ejecuta con el resultado de la consulta, que en este caso es un arreglo de objetos (cada objeto representa un usuario encontrado). Luego, res.json(e) envía una respuesta JSON al cliente, donde e es el arreglo de usuarios encontrado.
             // Cada objeto en el arreglo e será un documento de usuario convertido automáticamente a un objeto JSON por Mongoose.
             // La función .json() en Node.js y en la mayoría de los frameworks web, como Express, es un método que convierte el contenido de un objeto JavaScript en formato JSON.
             .catch((err) => {
                 console.log(err);
                 res.status(500).send("Error al obtener los usuarios");
-            });
     });
 }
 

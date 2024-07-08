@@ -2,7 +2,9 @@
 const mongoose = require("mongoose")
 
 // Establecemos la URL de la base de datos
-const mongoUrl = "mongodb+srv://celeste:1234@dbnodetipti.1pnmemk.mongodb.net/?appName=DBnodeTipti/proyectTipti"
+const mongoUrl = "mongodb+srv://celeste:1234@dbnodetipti.1pnmemk.mongodb.net/proyectTipti"
+// mongodb+srv://<username>:<password>@beyondthebasics.abcde.mongodb.net/db-name-here
+
 
 // Función para conectar a la base de datos
 function connectDB() {
