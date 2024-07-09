@@ -16,10 +16,15 @@ router.delete("/:id", userController.deleteUser); // Ruta para eliminar un usuar
 // Exportamos el router para usarlo en otros archivos
 module.exports = router;
 
-
+// Un enrutador en Express es esencialmente un middleware que toma una solicitud HTTP, determina cómo manejarla en función de la URL y el método HTTP (GET, POST, etc.), y luego pasa la solicitud a las funciones de controlador adecuadas.
 // Se crea un nuevo enrutador utilizando express.Router().
 // Este enrutador puede manejar rutas específicas y métodos HTTP (GET, POST, PUT, DELETE, etc.) definidos en él.
 // El enrutador se monta en la aplicación principal utilizando app.use(), especificando la ruta base (/ruta-especifica) donde se deben manejar las rutas definidas en el enrutador.
+
+
+// Un middleware en el contexto de Node.js y Express.js es una función que tiene acceso tanto al objeto de solicitud (req), al objeto de respuesta (res), y opcionalmente al siguiente middleware en la cadena (next), en el ciclo de solicitud-respuesta de una aplicación web. 
+// Un middleware es una función que se ejecuta antes de que se maneje una solicitud específica. Puede realizar diversas tareas como procesar datos de entrada, autenticar usuarios, verificar permisos, o cualquier otra operación necesaria para preparar la solicitud para su manejo o para manipular la respuesta antes de enviarla de vuelta al cliente.
+// Un middleware tiene acceso completo al objeto req (solicitud) y al objeto res (respuesta), lo que le permite leer datos de la solicitud, modificar la respuesta, o incluso pasar datos al siguiente middleware en la cadena.
 
 
 // MongoDB asigna automáticamente un identificador único (_id) a cada documento que se inserta en una colección. Este _id es único y se genera automáticamente en formato BSON (Binary JSON).
